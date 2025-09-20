@@ -11,12 +11,13 @@ export const authOptions : AuthOptions  = {
 },
  providers : [
        CredentialsProvider({
-         name: "credentials",   //c was capital
+         name: 'credentials',   //c was capital
     credentials: {
       email: { label: "Email", type: "email", placeholder: "Enter Your Email"  },
       password: { label: "Password", type: "password" , placeholder: "Enter Your Password" }
     },
      async authorize(credentials , req) {
+        console.log("called authorize")
         // const response = await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin",{
         //     method : "POST",
         //     headers :{"Content-Type": "application/json"},
@@ -40,7 +41,7 @@ export const authOptions : AuthOptions  = {
             'User-agent': 'learning app',}
             
         })   
-        console.log(response , "called authorize")
+        
 
         const payload = await response.json()
         if(payload.message === "success"){
