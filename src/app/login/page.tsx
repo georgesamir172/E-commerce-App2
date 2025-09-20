@@ -57,15 +57,16 @@ const Login = () => {
         email:values.email,
         password:values.password,
         redirect:false,
-        callbackUrl :"/"
+        // callbackUrl :"/"
       })
+      console.log(res , "my result")
 
       if (res?.ok){
         toast.success("Success",{
           position:'top-center',
           duration:3000
         })
-        window.location.href = res.url || "/"
+        // window.location.href = res.url || "/"
       }else{
         toast.error(res?.error,{
           position:'top-center',
