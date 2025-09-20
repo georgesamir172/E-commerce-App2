@@ -33,25 +33,25 @@ const Login = () => {
   })
   async function handleLogin(values : loginSchemaType){
       console.log(values , "my values")
-      try {
-        // const {data} = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signin",values)
-        const data = await getLogin(values)
-        console.log(data)
-        toast.success(data.message,{
-          position:'top-center',
-          duration:4000
-        })
+  //     try {
+  //       // const {data} = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signin",values)
+  //       const data = await getLogin(values)
+  //       console.log(data)
+  //       toast.success(data.message,{
+  //         position:'top-center',
+  //         duration:4000
+  //       })
 
-        // router.push("/")
-      } catch (error) {
-        	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	// @ts-ignore
-        toast.error(error.response.data.message,{
-          position:'top-center',
-          duration:4000
-        })
-        console.log(error)
-      }
+  //       // router.push("/")
+  //     } catch (error) {
+  //       	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// // @ts-ignore
+  //       toast.error(error.response.data.message,{
+  //         position:'top-center',
+  //         duration:4000
+  //       })
+  //       console.log(error)
+  //     }
 
       const res = await signIn("credentials",{
         email:values.email,
@@ -65,7 +65,7 @@ const Login = () => {
           position:'top-center',
           duration:3000
         })
-        // window.location.href = res.url || "/"
+        window.location.href = res.url || "/"
       }else{
         toast.error(res?.error,{
           position:'top-center',
