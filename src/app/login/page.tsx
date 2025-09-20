@@ -20,6 +20,7 @@ import { loginSchema, loginSchemaType } from '@/schema/login.schema'
 import {signIn} from "next-auth/react"
 import Link from 'next/link'
 import getLogin from '@/apis/getLogin'
+// import Credentials from 'next-auth/providers/credentials'
 
 const Login = () => {
 
@@ -52,8 +53,9 @@ const Login = () => {
   //       })
   //       console.log(error)
   //     }
-
-      const res = await signIn("Credentials",{
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+      const res = await signIn('credentials',{
         email:values.email,
         password:values.password,
         redirect:false,
