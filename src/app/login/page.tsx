@@ -53,6 +53,7 @@ const Login = () => {
   //       })
   //       console.log(error)
   //     }
+  // signIn
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
       const res = await signIn("credentials",{
