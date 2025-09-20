@@ -28,8 +28,8 @@ export const authOptions : AuthOptions  = {
 
         // const response = await fetch(`${process.env.API}/auth/signin`,{
 
-        const response = await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin",{
-            method : "POST",
+        const response = await fetch(`${process.env.API}/auth/signin`,{
+            method : 'POST',
             // headers :{"Content-Type": "application/json"},
             body:JSON.stringify({
                 email : credentials?.email,
