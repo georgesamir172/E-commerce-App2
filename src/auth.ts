@@ -36,8 +36,9 @@ export const authOptions : AuthOptions  = {
             }),
             // headers :{"Content-Type": "application/json"}
             headers :{"Content-Type": "application/json" ,     accept: 'application/json',
-    'User-agent': 'learning app',}
+            'User-agent': 'learning app',}
         })   
+        console.log(response , "my login response")
 
         const payload = await response.json()
         if(payload.message === "success"){

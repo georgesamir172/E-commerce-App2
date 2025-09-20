@@ -42,7 +42,7 @@ const Login = () => {
           duration:4000
         })
 
-        router.push("/")
+        // router.push("/")
       } catch (error) {
         	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
@@ -65,7 +65,7 @@ const Login = () => {
           position:'top-center',
           duration:3000
         })
-        window.location.href = res.url || "/"
+        // window.location.href = res.url || "/"
       }else{
         toast.error(res?.error,{
           position:'top-center',
