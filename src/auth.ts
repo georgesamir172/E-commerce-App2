@@ -37,8 +37,9 @@ export const authOptions : AuthOptions  = {
                 password : credentials?.password
             }),
             // headers :{"Content-Type": "application/json"}
-            headers :{"Content-Type": "application/json" ,     accept: 'application/json',
-            'User-agent': 'learning app',}
+            // headers :{"Content-Type": "application/json" ,     accept: 'application/json',
+            // 'User-agent': 'learning app',}
+            headers :{"Content-Type": "application/json" ,     accept: 'application/json'}
             
         })   
         
