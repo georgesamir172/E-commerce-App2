@@ -2,6 +2,7 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import { AuthOptions } from "next-auth"
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import {signIn} from "next-auth/react"
 export const authOptions : AuthOptions  = {
 // import email from './../node_modules/next-auth/core/lib/email/signin.d';
 //    import { User } from './../node_modules/next-auth/core/types.d';
@@ -15,7 +16,7 @@ export const authOptions : AuthOptions  = {
       email: { label: "Email", type: "email", placeholder: "Enter Your Email"  },
       password: { label: "Password", type: "password" , placeholder: "Enter Your Password" }
     },
-    authorize:async function(credentials , req) {
+    authorize:async function(credentials) {
         // const response = await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin",{
         //     method : "POST",
         //     headers :{"Content-Type": "application/json"},
@@ -51,7 +52,6 @@ export const authOptions : AuthOptions  = {
             }
         }
         throw new Error(payload.message || "Login failed")
-        return response
     }
     })
     ], 
