@@ -16,7 +16,7 @@ export const authOptions : AuthOptions  = {
       email: { label: "Email", type: "email", placeholder: "Enter Your Email"  },
       password: { label: "Password", type: "password" , placeholder: "Enter Your Password" }
     },
-    authorize:async function(credentials) {
+     async authorize(credentials) {
         // const response = await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin",{
         //     method : "POST",
         //     headers :{"Content-Type": "application/json"},
