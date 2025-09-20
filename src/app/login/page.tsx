@@ -53,7 +53,7 @@ const Login = () => {
   //       console.log(error)
   //     }
 
-      const res = await signIn("credentials",{
+      const res = await signIn("Credentials",{
         email:values.email,
         password:values.password,
         redirect:false,
