@@ -10,12 +10,12 @@ export const authOptions : AuthOptions  = {
 },
  providers : [
        CredentialsProvider({
-         name: 'credentials',   //c was capital
+         name: "Credentials",   //c was capital
     credentials: {
       email: { label: "Email", type: "email", placeholder: "Enter Your Email"  },
       password: { label: "Password", type: "password" , placeholder: "Enter Your Password" }
     },
-    authorize:async function(credentials) {
+    authorize:async function(credentials , req) {
         // const response = await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin",{
         //     method : "POST",
         //     headers :{"Content-Type": "application/json"},
@@ -51,7 +51,7 @@ export const authOptions : AuthOptions  = {
             }
         }
         throw new Error(payload.message || "Login failed")
-
+        return response
     }
     })
     ], 

@@ -55,7 +55,7 @@ const Login = () => {
   //     }
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-      const res = await signIn('credentials',{
+      const res = await signIn("Credentials",{
         email:values.email,
         password:values.password,
         redirect:false,
